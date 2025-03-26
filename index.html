@@ -15,22 +15,8 @@
             border: none;
         }
     </style>
-    <script>
-        function redirectToBlank() {
-            const newWindow = window.open("about:blank", "_blank");
-            if (newWindow) {
-                const iframe = newWindow.document.createElement("iframe");
-                iframe.src = "https://jellyfin.loungeserver.org";
-                iframe.style = "width:100vw; height:100vh; border:none;";
-                newWindow.document.body.appendChild(iframe);
-            } else {
-                console.error("Popup blocked!");
-            }
-        }
-        window.onload = redirectToBlank;
-    </script>
 </head>
 <body>
-    <h1>Loading Jellyfin...</h1>
+    <iframe src="https://jellyfin.loungeserver.org" allowfullscreen></iframe>
 </body>
 </html>
